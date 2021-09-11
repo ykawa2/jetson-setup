@@ -1,7 +1,7 @@
 # jetson-setup
 jetson setup scripts
 
-
+## AGX
 NVIDIA Jetson AGX Xavier [16GB]
  L4T 32.6.1 [ JetPack 4.6 ]
    Ubuntu 18.04.5 LTS
@@ -16,7 +16,7 @@ NVIDIA Jetson AGX Xavier [16GB]
  VPI: ii libnvvpi1 1.1.12 arm64 NVIDIA Vision Programming Interface library
  Vulcan: 1.2.70
 
-
+## docker
 NVIDIA Jetson AGX Xavier [16GB]
  L4T N.N.N [ JetPack UNKNOWN ]
    Ubuntu 18.04.5 LTS
