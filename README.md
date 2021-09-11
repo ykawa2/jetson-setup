@@ -30,7 +30,8 @@ NVIDIA Jetson AGX Xavier [16GB]
  Vision Works: NOT_INSTALLED
  VPI: NOT_INSTALLED
  Vulcan: 1.2.70
-
+ 
+The engine plan file is generated on an incompatible device, expecting compute 7.2 got compute 5.3, please rebuild.
 
  ## Nano
  NVIDIA Jetson Nano (Developer Kit Version)
