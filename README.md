@@ -22,7 +22,7 @@ NVIDIA Jetson AGX Xavier [16GB]
    Ubuntu 18.04.5 LTS
    Kernel Version: 4.9.253-tegra
  CUDA 10.2.300
-   CUDA Architecture: 7.2
+   CUDA Architecture: 7.2 <--
  OpenCV version: 4.5.0
    OpenCV Cuda: YES
  CUDNN: NOT_INSTALLED
