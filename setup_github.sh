@@ -19,6 +19,13 @@ ssh-add -k ~/.ssh/id_ed25519
 git config --global user.name "<username>"
 git config --global user.email "<email>"
 
+#Setup diff tool
+sudo apt install meld
+git config --global diff.tool meld
+git config --global difftool.prompt false
+git config --global merge.tool meld
+git config --global mergetool.prompt false
+
 #Show results and proceed to registration on github.
 git config --global --list
 cat ~/.ssh/id_ed25519.pub
