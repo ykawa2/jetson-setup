@@ -1,7 +1,14 @@
 # jetson-setup
-jetson setup scripts
 
-## AGX
+## boot from SD card
+cd ~/nvidia/nvidia_sdk/JetPack_4.6_Linux_JETSON_AGX_XAVIER_TARGETS/Linux_for_Tegra  
+sudo ./flash.sh jetson-agx-xavier-devkit mmcblk1p1 (sudo ./flash.sh -h for help)  
+
+
+
+
+
+# AGX environment
 NVIDIA Jetson AGX Xavier [16GB]
  L4T 32.6.1 [ JetPack 4.6 ]
    Ubuntu 18.04.5 LTS
@@ -33,7 +40,7 @@ NVIDIA Jetson AGX Xavier [16GB]
  
 The engine plan file is generated on an incompatible device, expecting compute 7.2 got compute 5.3, please rebuild.
 
- ## Nano
+ # Nano environment
  NVIDIA Jetson Nano (Developer Kit Version)
  L4T 32.6.1 [ JetPack 4.6 ]
    Ubuntu 18.04.5 LTS
