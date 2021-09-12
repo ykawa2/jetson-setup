@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Add
-sudo apt update
+sudo apt update -y
 sudo apt upgrade
 
 #Setup pip and docker compose
@@ -16,6 +16,6 @@ source ~/.bashrc
 
 sudo gpasswd -a $USER docker
 
-docker-compose --version
+echo "Please re-login to enable group settings"
 
 
