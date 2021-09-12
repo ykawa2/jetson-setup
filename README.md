@@ -1,10 +1,17 @@
 # jetson-setup
 
 ## boot from SD card
+(in host PC)  
 cd ~/nvidia/nvidia_sdk/JetPack_4.6_Linux_JETSON_AGX_XAVIER_TARGETS/Linux_for_Tegra  
 sudo ./flash.sh jetson-agx-xavier-devkit mmcblk1p1 (sudo ./flash.sh -h for help)  
+(Now cannot boot from mmc nor sdcard)  
 
+(insert sdcard to hostPC)cd ~/nvidia/nvidia_sdk/JetPack_4.6_Linux_JETSON_AGX_XAVIER_TARGETS/Linux_for_Tegra/rootfs  
+sudo cp -a * /media/xx/032dd16d-3912-4ca1-8c17-xxxxxxxxxxxx && sync  
+(root file system copied now) 
 
+add "change /dev/mmcblk0p1 to /dev/mmcblk1p1" to /boot/extlinux/extlinux.conf  
+(unplug sdcard and insert to Jetson)  
 
 
 
