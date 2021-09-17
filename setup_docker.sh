@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #Add
-sudo apt update -y
-sudo apt upgrade
+sudo apt update 
+sudo apt upgrade -y
 
 #Setup pip and docker compose
 sudo apt install curl python3-testresources
