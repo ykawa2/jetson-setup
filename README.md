@@ -77,3 +77,34 @@ NVIDIA Jetson Nano (Developer Kit Version)
  Vision Works: NOT_INSTALLED
  VPI: NOT_INSTALLED
  Vulcan: 1.2.70
+ 
+ #NX(contec)
+ NVIDIA Jetson Xavier NX (Developer Kit Version)
+ L4T 32.4.4 [ JetPack 4.4.1 ]
+   Ubuntu 18.04.6 LTS
+   Kernel Version: 4.9.140-tegra
+ CUDA 10.2.89
+   CUDA Architecture: 7.2
+ OpenCV version: 4.1.1
+   OpenCV Cuda: NO
+ CUDNN: 8.0.0.180
+ TensorRT: 7.1.3.0
+ Vision Works: 1.6.0.501
+ VPI: 4.4.1-b50
+ Vulcan: 1.2.70
+
+# NX (contec)
+NVIDIA Jetson Xavier NX (Developer Kit Version)
+ L4T 32.4.4 [ JetPack 4.4.1 ]
+   Ubuntu 18.04.6 LTS
+   Kernel Version: 4.9.140-tegra
+ CUDA 10.2.89
+   CUDA Architecture: 7.2
+ OpenCV version: 4.1.1
+   OpenCV Cuda: NO
+ CUDNN: 8.0.0.180
+ TensorRT: 7.1.3.0
+ Vision Works: 1.6.0.501
+ VPI: 4.4.1-b50
+ Vulcan: 1.2.70
+
