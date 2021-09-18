@@ -1,17 +1,20 @@
 #!/bin/bash
 
-
 sudo apt update 
 sudo apt upgrade -y
 
 #enable external sdcard (exfat)
-# ?sudo add-apt-repository universe
 sudo apt install exfat-fuse exfat-utils
 
 #set python3 as default
 cd /usr/bin
 sudo unlink python
 sudo ln -s python3 python
+
+#Unixbench
+#Usage cd byte-unixbench/UnixBench -> ./Run
+cd ~
+git clone https://github.com/kdlucas/byte-unixbench
 
 #set utilities for jetson
 cd ~
