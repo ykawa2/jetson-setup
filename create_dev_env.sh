@@ -35,8 +35,8 @@ git clone https://github.com/tsutof/jetson-thermal-monitor
 #Setting for remote desktop environment
 sudo apt install -y xrdp
 echo lxsession > ~/.xsession
-echo "Set IP address manually and after chaging the IP adress, you can connect this device from remote desktop."
+echo ">>> Set IP address manually and after chaging the IP adress, you can connect this device from remote desktop."
 
 echo "Setup vscode from here"
-echo https://code.visualstudio.com/#alt-downloads
+echo ">>> https://code.visualstudio.com/#alt-downloads"
 
