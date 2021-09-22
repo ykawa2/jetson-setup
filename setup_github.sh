@@ -29,4 +29,4 @@ git config --global mergetool.prompt false
 #Show results and proceed to registration on github.
 git config --global --list
 cat ~/.ssh/id_ed25519.pub
-echo "Please regsiter new SSH key on account settings of github"
+echo ">>> Please regsiter new SSH key on account settings of github"
