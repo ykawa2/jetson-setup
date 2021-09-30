@@ -32,6 +32,11 @@ echo "Reboot to enable jetson-stats"
 sudo apt install python3-pip libfreetype6-dev python3-numpy python3-matplotlib
 git clone https://github.com/tsutof/jetson-thermal-monitor
 
+#Easy access to jetson_clocks and npvmodel for application
+echo "#Easy access to jetson_clocks and npvmodel for application" >> /etc/sudoers
+echo "%sudo   ALL=NOPASSWD: /usr/bin/jetson_clocks" >> /etc/sudoers
+echo "%sudo   ALL=NOPASSWD: /usr/sbin/nvpmodel" >> /etc/sudoers
+
 #Setting for remote desktop environment
 sudo apt install -y xrdp
 echo lxsession > ~/.xsession
