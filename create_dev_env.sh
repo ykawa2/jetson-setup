@@ -36,6 +36,7 @@ git clone https://github.com/tsutof/jetson-thermal-monitor
 echo "#Easy access to jetson_clocks and npvmodel for application" >> /etc/sudoers
 echo "%sudo   ALL=NOPASSWD: /usr/bin/jetson_clocks" >> /etc/sudoers
 echo "%sudo   ALL=NOPASSWD: /usr/sbin/nvpmodel" >> /etc/sudoers
+echo "%sudo   ALL=NOPASSWD: /sbin/ifconfig" >> /etc/sudoers
 
 #Setting for remote desktop environment
 sudo apt install -y xrdp
