@@ -1,48 +1,57 @@
 #!/bin/bash
 
+#update-------------------------------------------------------------
 sudo apt update 
 sudo apt upgrade -y
 
-#enable external sdcard (exfat)
+#SDcard settings----------------------------------------------------
+echo ">>> Installing utils for external sdcard (format: exfat)"
 sudo apt install -y exfat-fuse exfat-utils
 
-#set python3 as default
+#python settings----------------------------------------------------
+echo ">>> Setting python3 as default"
 cd /usr/bin
 sudo unlink python
 sudo ln -s python3 python
 
-#Unixbench
-#Usage cd byte-unixbench/UnixBench -> ./Run
+#UnixBench----------------------------------------------------------
+echo ">>> Downloading UnixBench"
 cd ~
 git clone https://github.com/kdlucas/byte-unixbench
 
-#set utilities for jetson
+#jetsonUtilities----------------------------------------------------
+echo ">>> Installing jetsonUtilities"
 cd ~
 git clone https://github.com/jetsonhacks/jetsonUtilities
 cd jetsonUtilities
 python jetsonInfo.py
 
-#Jetson stats (launch with jtop)
+#Jetson stats-------------------------------------------------------
+echo ">>> Installing Jetson stats (launch with jtop)"
 sudo apt install python-pip
 sudo pip install jetson-stats
 echo ">>> Reboot to enable jetson-stats"
 
-#Jetson thermal monitor 
+#jetson thermal monitor---------------------------------------------
+echo ">>> Installing jetson thermal monitor "
 #Usage: cd ~/jetson-thermal-monitor/ -> python jetson_temp_monitor.py
 sudo apt install -y python3-pip libfreetype6-dev python3-numpy python3-matplotlib
 git clone https://github.com/tsutof/jetson-thermal-monitor
 
-#Easy access to jetson_clocks and npvmodel for application
+#setting sudoers for app--------------------------------------------
+echo ">>> Edit sudoers for easy access to jetson_clocks and npvmodel for application"
 sudo echo "#Easy access to jetson_clocks and npvmodel for application" >> /etc/sudoers
 sudo echo "%sudo   ALL=NOPASSWD: /usr/bin/jetson_clocks" >> /etc/sudoers
 sudo echo "%sudo   ALL=NOPASSWD: /usr/sbin/nvpmodel" >> /etc/sudoers
 sudo echo "%sudo   ALL=NOPASSWD: /sbin/ifconfig" >> /etc/sudoers
 
-#Setting for remote desktop environment
+#Desktop env--------------------------------------------------------
+echo ">>> Setting for remote desktop environment"
 sudo apt install -y xrdp
 echo lxsession > ~/.xsession
 echo ">>> Set IP address manually and after chaging the IP adress, you can connect this device from remote desktop."
 
+#VS Code------------------------------------------------------------
 echo ">>> Setup vscode from here"
 echo ">>> https://code.visualstudio.com/#alt-downloads"
 
