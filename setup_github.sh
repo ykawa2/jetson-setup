@@ -1,7 +1,17 @@
 #!/bin/bash
 
+read -p "Input user address:" ADDRESS
+read -p "Input user name:" USER
+
+echo ""
+echo "Press y to proceed (Address:${ADDRESS}  USER:${USER}):" RET
+
+if [ $RET != "y" ]; then
+exit0
+fi
+
 #Create SSH key (~/.ssh/id_ed25519 and .pub)
-ssh-keygen -t ed25519 -C "xx@gmail.com"
+ssh-keygen -t ed25519 -C ${ADDRESS}
 
 #launch ssh-agent
 eval "$(ssh-agent -s)" 
@@ -16,8 +26,8 @@ echo "  User git" >> ~/.ssh/config
 #Register ssh key to ssh-agent
 ssh-add -k ~/.ssh/id_ed25519
 
-git config --global user.name "xx"
-git config --global user.email "xx@gmail.com"
+git config --global user.name ${USER}
+git config --global user.email ${ADDRESS}
 
 #Setup diff tool
 sudo apt install meld
