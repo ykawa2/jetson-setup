@@ -4,7 +4,7 @@ sudo apt update
 sudo apt upgrade -y
 
 #enable external sdcard (exfat)
-sudo apt install exfat-fuse exfat-utils
+sudo apt install -y exfat-fuse exfat-utils
 
 #set python3 as default
 cd /usr/bin
@@ -25,24 +25,24 @@ python jetsonInfo.py
 #Jetson stats (launch with jtop)
 sudo apt install python-pip
 sudo pip install jetson-stats
-echo "Reboot to enable jetson-stats"
+echo ">>> Reboot to enable jetson-stats"
 
 #Jetson thermal monitor 
 #Usage: cd ~/jetson-thermal-monitor/ -> python jetson_temp_monitor.py
-sudo apt install python3-pip libfreetype6-dev python3-numpy python3-matplotlib
+sudo apt install -y python3-pip libfreetype6-dev python3-numpy python3-matplotlib
 git clone https://github.com/tsutof/jetson-thermal-monitor
 
 #Easy access to jetson_clocks and npvmodel for application
-echo "#Easy access to jetson_clocks and npvmodel for application" >> /etc/sudoers
-echo "%sudo   ALL=NOPASSWD: /usr/bin/jetson_clocks" >> /etc/sudoers
-echo "%sudo   ALL=NOPASSWD: /usr/sbin/nvpmodel" >> /etc/sudoers
-echo "%sudo   ALL=NOPASSWD: /sbin/ifconfig" >> /etc/sudoers
+sudo echo "#Easy access to jetson_clocks and npvmodel for application" >> /etc/sudoers
+sudo echo "%sudo   ALL=NOPASSWD: /usr/bin/jetson_clocks" >> /etc/sudoers
+sudo echo "%sudo   ALL=NOPASSWD: /usr/sbin/nvpmodel" >> /etc/sudoers
+sudo echo "%sudo   ALL=NOPASSWD: /sbin/ifconfig" >> /etc/sudoers
 
 #Setting for remote desktop environment
 sudo apt install -y xrdp
 echo lxsession > ~/.xsession
 echo ">>> Set IP address manually and after chaging the IP adress, you can connect this device from remote desktop."
 
-echo "Setup vscode from here"
+echo ">>> Setup vscode from here"
 echo ">>> https://code.visualstudio.com/#alt-downloads"
 
