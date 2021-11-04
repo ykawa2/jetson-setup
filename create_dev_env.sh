@@ -51,6 +51,19 @@ sudo apt install -y xrdp
 echo lxsession > ~/.xsession
 echo ">>> Set IP address manually and after chaging the IP adress, you can connect this device from remote desktop."
 
+#Docker-Compose settings--------------------------------------------
+echo ">>> Setup pip and docker compose"
+sudo apt install curl python3-testresources
+curl -kL https://bootstrap.pypa.io/get-pip.py | python3
+python3 -m pip install --user docker-compose
+
+echo '' >> ~/.bashrc
+echo '#added for docker compose' >> ~/.bashrc
+echo 'PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
+source ~/.bashrc
+sudo gpasswd -a $USER docker
+echo ">>> Please re-login to enable group settings"
+
 #VS Code------------------------------------------------------------
 echo ">>> Setup vscode from here"
 echo ">>> https://code.visualstudio.com/#alt-downloads"
