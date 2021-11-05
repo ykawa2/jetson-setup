@@ -4,7 +4,7 @@ read -p "Input user address:" ADDRESS
 read -p "Input user name:" USER
 
 echo ""
-echo "Press y to proceed (Address:${ADDRESS}  USER:${USER}):" RET
+read -p "Press y to proceed (Address:${ADDRESS}  USER:${USER}):" RET
 
 if [ $RET != "y" ]; then
 exit0
