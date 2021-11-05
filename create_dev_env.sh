@@ -38,13 +38,6 @@ echo ">>> Installing jetson thermal monitor "
 sudo apt install -y python3-pip libfreetype6-dev python3-numpy python3-matplotlib
 git clone https://github.com/tsutof/jetson-thermal-monitor
 
-#setting sudoers for app--------------------------------------------
-echo ">>> Edit sudoers for easy access to jetson_clocks and npvmodel for application"
-sudo echo "#Easy access to jetson_clocks and npvmodel for application" >> /etc/sudoers
-sudo echo "%sudo   ALL=NOPASSWD: /usr/bin/jetson_clocks" >> /etc/sudoers
-sudo echo "%sudo   ALL=NOPASSWD: /usr/sbin/nvpmodel" >> /etc/sudoers
-sudo echo "%sudo   ALL=NOPASSWD: /sbin/ifconfig" >> /etc/sudoers
-
 #Desktop env--------------------------------------------------------
 echo ">>> Setting for remote desktop environment"
 sudo apt install -y xrdp
@@ -64,7 +57,18 @@ source ~/.bashrc
 sudo gpasswd -a $USER docker
 echo ">>> Please re-login to enable group settings"
 
+#setting sudoers for app--------------------------------------------
+echo "**************************************************************"
+echo ">>> Edit sudoers for easy access to jetson_clocks and npvmodel for application"
+echo "#Easy access to jetson_clocks and npvmodel for application"
+echo "%sudo   ALL=NOPASSWD: /usr/bin/jetson_clocks"
+echo "%sudo   ALL=NOPASSWD: /usr/sbin/nvpmodel"
+echo "%sudo   ALL=NOPASSWD: /sbin/ifconfig"
+echo "**************************************************************"
+
 #VS Code------------------------------------------------------------
+echo "**************************************************************"
 echo ">>> Setup vscode from here"
 echo ">>> https://code.visualstudio.com/#alt-downloads"
+echo "**************************************************************"
 
