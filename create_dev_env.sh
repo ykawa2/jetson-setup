@@ -54,7 +54,7 @@ echo ">>> Set IP address manually and after chaging the IP adress, you can conne
 #Docker-Compose settings--------------------------------------------
 echo ""
 echo ">>> Setup pip and docker compose"
-sudo apt install curl python3-testresources
+sudo apt install -y curl python3-testresources
 curl -kL https://bootstrap.pypa.io/get-pip.py | python3
 python3 -m pip install --user docker-compose
 
