@@ -72,6 +72,7 @@ echo "#Easy access to jetson_clocks and npvmodel for application"
 echo "%sudo   ALL=NOPASSWD: /usr/bin/jetson_clocks"
 echo "%sudo   ALL=NOPASSWD: /usr/sbin/nvpmodel"
 echo "%sudo   ALL=NOPASSWD: /sbin/ifconfig"
+echo "%sudo   ALL=NOPASSWD: /sbin/sysctl
 echo "**************************************************************"
 
 #VS Code------------------------------------------------------------
