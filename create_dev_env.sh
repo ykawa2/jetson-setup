@@ -41,6 +41,7 @@ echo ">>> Reboot to enable jetson-stats"
 echo ""
 echo ">>> Installing jetson thermal monitor "
 #Usage: cd ~/jetson-thermal-monitor/ -> python jetson_temp_monitor.py
+cd ~
 sudo apt install -y python3-pip libfreetype6-dev python3-numpy python3-matplotlib
 git clone https://github.com/tsutof/jetson-thermal-monitor
 
@@ -72,7 +73,7 @@ echo "#Easy access to jetson_clocks and npvmodel for application"
 echo "%sudo   ALL=NOPASSWD: /usr/bin/jetson_clocks"
 echo "%sudo   ALL=NOPASSWD: /usr/sbin/nvpmodel"
 echo "%sudo   ALL=NOPASSWD: /sbin/ifconfig"
-echo "%sudo   ALL=NOPASSWD: /sbin/sysctl
+echo "%sudo   ALL=NOPASSWD: /sbin/sysctl"
 echo "**************************************************************"
 
 #VS Code------------------------------------------------------------
