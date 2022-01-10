@@ -7,7 +7,7 @@ echo ""
 read -p "Press y to proceed (Address:${ADDRESS}  USER:${USER}):" RET
 
 if [ $RET != "y" ]; then
-exit0
+    exit 0
 fi
 
 #Create SSH key (~/.ssh/id_ed25519 and .pub)
@@ -30,11 +30,11 @@ git config --global user.name ${USER}
 git config --global user.email ${ADDRESS}
 
 #Setup diff tool
-sudo apt install meld
-git config --global diff.tool meld
-git config --global difftool.prompt false
-git config --global merge.tool meld
-git config --global mergetool.prompt false
+# sudo apt install meld
+# git config --global diff.tool meld
+# git config --global difftool.prompt false
+# git config --global merge.tool meld
+# git config --global mergetool.prompt false
 
 #Show results and proceed to registration on github.
 git config --global --list
