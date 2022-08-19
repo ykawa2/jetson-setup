@@ -34,6 +34,7 @@ python jetsonInfo.py
 echo ""
 echo ">>> Installing Jetson stats (launch with jtop)"
 sudo apt install python-pip
+sudo pip install -U pip
 sudo pip install jetson-stats
 echo ">>> Reboot to enable jetson-stats"
 
@@ -82,3 +83,5 @@ echo ">>> Setup vscode from here"
 echo "https://code.visualstudio.com/#alt-downloads"
 echo "**************************************************************"
 
+echo
+read -r -p "Press [Enter] key to finish."
